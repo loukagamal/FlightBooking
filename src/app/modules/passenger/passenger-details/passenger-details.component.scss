@@ -1,1 +1,31 @@
-
+.container-fluid{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.tiket{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.card{
+    max-width: 400px;
+    text-align: center;
+    .card-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        max-width: 400px;
+        height: 100px;
+        .bookNow{
+            padding-left: 20px;
+            padding-right: 20px;
+            border-left: dashed rgba(219, 216, 216, 0.356) 4px;
+        }
+    }
+    .card-footer{
+        display: flex;
+        justify-content: space-between;
+    }
+}

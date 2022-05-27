@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AvailableFlights } from '../home/models/availabelFlights';
 import { search } from '../models/search';
 import { AvailableFlightsService } from '../services/available-flights.service';
+import { TiketsService } from '../services/tikets.service';
 
 @Component({
   selector: 'app-available-flights',
@@ -16,8 +17,9 @@ export class AvailableFlightsComponent implements OnInit {
   result!: AvailableFlights[];
   previousLabel="";
    nextLabel="";
+   tiketBooked!:AvailableFlights;
 
-  constructor(private availableFlights: AvailableFlightsService , private readonly routet:Router) { 
+  constructor(private availableFlights: AvailableFlightsService , private readonly routet:Router ,private tikets :TiketsService) { 
   }
 
   p=1;
@@ -25,14 +27,15 @@ export class AvailableFlightsComponent implements OnInit {
   ngOnInit(): void {
   
   }
-  bookNow(){
-    
+  bookNow(tiket :AvailableFlights){
+    console.log("ID Tiket"+tiket.id);
+   this.tikets.setTikets(tiket);
     this.routet.navigate(['passenger'])
   }
-  page = 1;
-  handlePageChange(event :any) {
-    this.page = event;
-  }
+ 
+
+
+
 
  
   

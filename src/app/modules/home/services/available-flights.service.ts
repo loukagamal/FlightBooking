@@ -25,13 +25,11 @@ export class AvailableFlightsService {
    })
    )
   }
-  // getDataBysearch(search:search){
-  //   let data=this.availableFlightsData
-  //   return data.filter((data: { country: string | undefined; })=>{
-  //     return data.country==search.from
-  //    })
-     
-  //   }
+
+  
+
+
+ 
 
  
   
