@@ -2,14 +2,7 @@
   
 
 
-  "home": {
-    
-  },
-  "passenger": {
- 
-  },
-  "available": {
- 
-  }
+  "home":"home",
+  "from":"from"
   
 }
