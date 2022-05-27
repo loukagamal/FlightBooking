@@ -45,7 +45,7 @@ export class HomeComponent implements OnInit {
   }
   gitAllFligths() {
 
-    this.availableFlights.getAllAvailableFlights().subscribe((res: any) => {
+    this.availableFlights.getAllAvailableFlights().subscribe((res: AvailableFlights[]) => {
       this.availableFlightsData = res;
     });
 

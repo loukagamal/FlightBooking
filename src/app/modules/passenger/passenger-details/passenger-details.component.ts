@@ -42,8 +42,6 @@ export class PassengerDetailsComponent implements OnInit {
   }
   onSubmit() {
     this.passengerdata = this.passengerForm.value
-console.log( this.passengerForm.value);
-
     if (this.passengerForm.valid)
      { this.passengerervice.setPassenger(this.passengerdata)
       this.routet.navigate(['home'])
