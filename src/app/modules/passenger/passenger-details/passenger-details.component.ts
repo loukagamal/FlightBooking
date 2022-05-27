@@ -14,8 +14,8 @@ export class PassengerDetailsComponent implements OnInit {
   passengerForm: FormGroup = new FormGroup({});
   passengerdata!: passengerDetails;
   tiketBooked!:AvailableFlights;
-  from="";
-  to=""
+ tiket=false;
+
 
 
   constructor(private fb: FormBuilder, private passengerervice: PassengerService ,private tikets: TiketsService) { this.initForm() }
@@ -48,7 +48,9 @@ export class PassengerDetailsComponent implements OnInit {
   }
   getTiket(){
     this.tiketBooked= this.tikets.getTikets() ;
-   console.log( this.tiketBooked);
+    if(this.tiketBooked)
+    { return true;}
+    else{ return false;}
    
   }
  

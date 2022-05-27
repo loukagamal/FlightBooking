@@ -28,7 +28,6 @@ export class AvailableFlightsComponent implements OnInit {
   
   }
   bookNow(tiket :AvailableFlights){
-    console.log("ID Tiket"+tiket.id);
    this.tikets.setTikets(tiket);
     this.routet.navigate(['passenger'])
   }
