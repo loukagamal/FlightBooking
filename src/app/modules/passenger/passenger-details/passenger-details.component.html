@@ -1,0 +1,142 @@
+<div class="container-fluid">
+
+        <nav class="navbar navbar-expand-lg navbar-light py-3">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    <img src="assets/img/elDelta.png" alt="logo" width="150">
+                </a>
+            </div>
+        </nav>
+
+
+    <div class="container">
+        <div class="row py-5 mt-4 align-items-center">
+            <!-- For Demo Purpose -->
+            <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
+                <img src="assets/img/fligth.jpg" alt=""
+                    class="img-fluid mb-3 d-none d-md-block">
+               
+            </div>
+
+            <div class="col-md-7 col-lg-6 ml-auto">
+                <form [formGroup]="passengerForm" (ngSubmit)="onSubmit()" novalidate>
+                    <div class="row">
+
+                        <div class="input-group col-lg-6 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-user text-muted"></i>
+                                </span>
+                            </div>
+                            <input formControlName="firstName" id="firstName" type="text" name="firstname"
+                                placeholder="First Name" class="form-control bg-white border-left-0 border-md">
+                        </div>
+
+                        <div class="input-group col-lg-6 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-user text-muted"></i>
+                                </span>
+                            </div>
+                            <input formControlName="lastName" id="lastName" type="text" name="lastname"
+                                placeholder="Last Name" class="form-control bg-white border-left-0 border-md">
+                        </div>
+
+                        <div class="input-group col-lg-12 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-envelope text-muted"></i>
+                                </span>
+                            </div>
+                            <input formControlName="email" id="email" type="email" name="email"
+                                placeholder="Email Address" class="form-control bg-white border-left-0 border-md">
+                        </div>
+
+                        <div class="input-group col-lg-12 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-phone-square text-muted"></i>
+                                </span>
+                            </div>
+                            <select formControlName="code" id="countryCode" name="countryCode" style="max-width: 80px"
+                                class="custom-select form-control bg-white border-left-0 border-md h-100 font-weight-bold text-muted">
+                                <option value="">+02</option>
+                                <option value="">+088</option>
+                                <option value="">+052</option>
+                                <option value="">+08</option>
+                            </select>
+                            <input formControlName="phone" id="phoneNumber" type="tel" name="phone"
+                                placeholder="Phone Number" class="form-control bg-white border-md border-left-0 pl-3">
+                        </div>.
+
+
+                        <div class="input-group col-lg-12 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-black-tie text-muted"></i>
+                                </span>
+                            </div>
+                            <select formControlName="gender" id="gender" name="gender"
+                                class="form-control custom-select bg-white border-left-0 border-md">
+                                <option value="">Choose your Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Femal">Femal</option>
+                            </select>
+                        </div>
+                        <div class="input-group col-lg-12 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <select formControlName="payments" id="payments" name="payments"
+                                class="form-control custom-select bg-white border-left-0 border-md">
+                                <option value="">Choose your Payment Options </option>
+                                <option value="Pay pal">Pay pal</option>
+                                <option value="Credit cards">Credit cards</option>
+                                <option value="Mobile payments">Mobile payments</option>
+                            </select>
+                        </div>
+                        <div class="input-group col-lg-6 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <input formControlName="cardNumber" id="lastName" type="text" name="cardNumber"
+                                placeholder="Card Number" class="form-control bg-white border-left-0 border-md">
+                        </div>
+                        <div class="input-group col-lg-6 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <input formControlName="expired" id="expiredday" type="text" name="expiredday" placeholder="MM/YY"
+                                class="form-control bg-white border-left-0 border-md">
+                        </div>
+
+                        <div class="input-group col-lg-6 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-credit-card" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <input formControlName="cvv" id="cvv" type="text" name="cvv"
+                                placeholder="cvv" class="form-control bg-white border-left-0 border-md">
+                        </div>
+                        <!-- Submit Button -->
+                        <div class="form-group col-lg-12 mx-auto mb-0">
+                            <button class="btn btn-primary btn-block py-2">
+                                <span class="font-weight-bold"> submit</span>
+                            </button>
+                        </div>
+
+
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

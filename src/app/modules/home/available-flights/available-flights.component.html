@@ -1,0 +1,29 @@
+
+<div class="container-fluid">
+    <div class="availableFlightsData row d-flex justify-content-center">
+
+        <div class="card col-12 col-md-6 col-lg-4 m-2" *ngFor="let index of availableFlightsData  | paginate: { itemsPerPage: 12, currentPage: p }">
+            <div class="card-content">
+                <div class="from">{{index.fromcountry}}</div>
+            <div><img src="../../../../assets/img/flight-rout.svg" alt=""> </div>
+            <div class="to">{{index.tocountry}}</div>
+            <div class="bookNow">
+                <button (click)="bookNow()" class="btn btn-primary ">Book Now</button>
+            </div>
+            </div>
+            <div class="card-footer">
+               <div class="date-lunch" >Departure Times {{index.dateLunch}}</div>
+               <div class="total-Price">Time : {{index.departureTimes}}</div>
+            </div>
+            <div class="card-footer">
+                <div class="date-lunch" >Arrival Times : {{index.arrivaltimes}}</div>
+                <div class="total-Price">Price :{{index.totalPrice}}</div>
+             </div>
+        </div>
+<div class="col-12  d-flex justify-content-center">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+</div>
+        </div>
+
+</div>
