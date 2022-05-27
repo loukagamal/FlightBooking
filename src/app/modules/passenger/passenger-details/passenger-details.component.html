@@ -11,7 +11,7 @@
 
     <div class="container">
         <div class="row py-5 mt-4 align-items-center">
-            <!-- For Demo Purpose -->
+
             <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
                 <img src="assets/img/fligth.jpg" alt=""
                     class="img-fluid mb-3 d-none d-md-block">
@@ -29,7 +29,7 @@
                                 </span>
                             </div>
                             <input formControlName="firstName" id="firstName" type="text" name="firstname"
-                                placeholder="First Name" class="form-control bg-white border-left-0 border-md">
+                                placeholder="First Name *" class="form-control bg-white border-left-0 border-md">
                         </div>
 
                         <div class="input-group col-lg-6 mb-4">
@@ -39,7 +39,7 @@
                                 </span>
                             </div>
                             <input formControlName="lastName" id="lastName" type="text" name="lastname"
-                                placeholder="Last Name" class="form-control bg-white border-left-0 border-md">
+                                placeholder="Last Name *" class="form-control bg-white border-left-0 border-md">
                         </div>
 
                         <div class="input-group col-lg-12 mb-4">
@@ -49,7 +49,7 @@
                                 </span>
                             </div>
                             <input formControlName="email" id="email" type="email" name="email"
-                                placeholder="Email Address" class="form-control bg-white border-left-0 border-md">
+                                placeholder="Email Address *" class="form-control bg-white border-left-0 border-md">
                         </div>
 
                         <div class="input-group col-lg-12 mb-4">
@@ -60,10 +60,11 @@
                             </div>
                             <select formControlName="code" id="countryCode" name="countryCode" style="max-width: 80px"
                                 class="custom-select form-control bg-white border-left-0 border-md h-100 font-weight-bold text-muted">
-                                <option value="">+02</option>
-                                <option value="">+088</option>
-                                <option value="">+052</option>
-                                <option value="">+08</option>
+                                <option value="">code</option>
+                                <option value="+02">+02</option>
+                                <option value="+088">+088</option>
+                                <option value="+052">+052</option>
+                                <option value="+08">+08</option>
                             </select>
                             <input formControlName="phone" id="phoneNumber" type="tel" name="phone"
                                 placeholder="Phone Number" class="form-control bg-white border-md border-left-0 pl-3">
@@ -104,7 +105,7 @@
                                 </span>
                             </div>
                             <input formControlName="cardNumber" id="lastName" type="text" name="cardNumber"
-                                placeholder="Card Number" class="form-control bg-white border-left-0 border-md">
+                                placeholder="Card Number *" class="form-control bg-white border-left-0 border-md">
                         </div>
                         <div class="input-group col-lg-6 mb-4">
                             <div class="input-group-prepend">
@@ -123,9 +124,9 @@
                                 </span>
                             </div>
                             <input formControlName="cvv" id="cvv" type="text" name="cvv"
-                                placeholder="cvv" class="form-control bg-white border-left-0 border-md">
+                                placeholder="cvv *" class="form-control bg-white border-left-0 border-md">
                         </div>
-                        <!-- Submit Button -->
+                       
                         <div class="form-group col-lg-12 mx-auto mb-0">
                             <button class="btn btn-primary btn-block py-2">
                                 <span class="font-weight-bold"> submit</span>
